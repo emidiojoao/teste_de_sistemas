@@ -2,6 +2,7 @@ package ex04;
 
 public class Circulo {
     private double raio;
+    private double receitaTtotal;
 
     public double getRaio() {
         return raio;

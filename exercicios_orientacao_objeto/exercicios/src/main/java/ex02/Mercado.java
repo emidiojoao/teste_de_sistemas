@@ -6,6 +6,7 @@ public class Mercado {
     private double precoMaca;
     private int laranjaVendidas;
     private double precoLaranja;
+    private double receitaTotal;
 
     public String getNome() {
         return nome;
@@ -47,6 +48,10 @@ public class Mercado {
         this.precoLaranja = precoLaranja;
     }
 
+    public double receitaTotal(double receitaMaca, double receitaLaranja){
+        return receitaMaca + receitaLaranja;
+    }
+
     public double receitaMaca(double macasVendidas, double precoMaca){
         return macasVendidas * precoMaca;
     }
@@ -65,6 +70,7 @@ public class Mercado {
                 "\nLaranja vendidas: " + laranjaVendidas +
                 "\nPreço laranja: R$ " + precoLaranja +
                 "\nReceita Maçã: R$ " + receitaMaca(macasVendidas, precoMaca) +
-                "\nReceita Laranja: R$ " + receitaLaranja(laranjaVendidas, precoLaranja);
+                "\nReceita Laranja: R$ " + receitaLaranja(laranjaVendidas, precoLaranja) +
+                "\nReceita total: R$ " + receitaTotal(receitaMaca(macasVendidas, precoMaca), receitaLaranja(laranjaVendidas, precoLaranja));
     }
 }
